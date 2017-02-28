@@ -137,3 +137,5 @@ YOU WILL NOT RECEIVE HELP IF YOU HAVEN'T READ THE INSTRUCTIONS WHEN INSTALLING Y
 ## TODO list
 
  * Finish this up and make memeboard
+ 
+its been fun friends, but MRS is basically dead now. RIP
