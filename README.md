@@ -18,7 +18,7 @@ This board follows the Acmlmboard concept. If you don't know Acmlmboard, you don
 
 Blargboard requires PHP 5.3. You also need the mcrypt extension and PHP-GD
 
-You will also need mod-rewrite for apache2 for rewritten URLS
+You will also need mod-rewrite for apache2 and allow override all for rewritten URLS
 
 There is no exact requirement for MySQL, but make sure to have a recent version.
 
