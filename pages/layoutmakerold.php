@@ -7,7 +7,7 @@ foreach($bases as $base)
 	$layoutimage = $base['name'];
 	$picture = '';
 	if (file_exists('pages/bases/'.$base['name'].'.png'))
-		$picture = '<img src="'.$boardroot.'/plugins/layoutmaker/pages/bases/'.$layoutimage.'.png" />';
+		$picture = '<img src="'.$boardroot.'/pages/bases/'.$layoutimage.'.png" />';
 	$cellClass = ($cellClass + 1) % 2;
 	$offers .= "
 	<tr class=\"cell$cellClass\">
@@ -40,7 +40,7 @@ Obvious problems I'm well aware of that you shouldn't bother bugging me about:
 	<li>Sliders don't have buddy ranges</li>
 	<li>The CGA palette in the color picker doesn't trigger the auto-update.</li>
 	<li>Layouts need the WHole post box setting turned on</li>
-	<li>There are only stock templates, gonna make more</li>
+	<li>Some layouts dont work right lol</li>
 </ul>
 </p>
 ",	$offers);

@@ -58,6 +58,9 @@ If you want an image that doesnt scroll with the post contents, click the ... bu
 	<li>There are only stock templates, gonna make more</li>
 </ul>
 </div>
+<div class=\"Eziosig\">
+Credit to EzioisAwesome56 for this blargboard port of layout maker<br>
+</div>
 </p>
 ",	$offers);
 
