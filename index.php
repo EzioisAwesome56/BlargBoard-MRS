@@ -160,7 +160,7 @@ if(!file_exists($themefile))
 
 $layout_credits = 
 '<img src="'.resourceLink('img/poweredbyblarg.png').'" style="float: left; margin-right: 3px;">
-<a href="http://bit.ly/2bGDmfd" target="_blank">Blargboard '.BLARG_VERSION.'</a> &middot; by EzioisAwesome56<br>
+<a href="https://github.com/EzioisAwesome56/BlargBoard-MRS" target="_blank">Blargboard '.BLARG_VERSION.'</a> &middot; by EzioisAwesome56<br>
 <a href="/blargboard/credits">Credits page</a><br>';
 	
 
