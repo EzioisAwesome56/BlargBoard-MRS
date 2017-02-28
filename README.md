@@ -76,15 +76,13 @@ to update from blargboard 1.2.4, download the previous version update package fr
  * more Acmlmboard feel
  * typical messageboard features
  
-## New Features in Blargboard 1.2.3 MRS
+## New Features in Blargboard 1.2.5 MRS
 
- * Fixed syndromes
- * Fixed spelling in newreply.php and newthread.php
- * 4 new instamemes (wrote the new code and found maorninja did it first. sorry man)
- * added a button for instameme on the reply box
- * fixed up reregs.php
- * fixed user nuke link in profile.php
+ * insert new features here
  
+## Bug fixes in Blargboard 1.2.5 MRS
+ 
+ * fixed the goomba challenge not displaying the images
 -------------------------------------------------------------------------------
 
 Coders and such, who like to hack new features in their software, may think that the use
