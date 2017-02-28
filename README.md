@@ -82,6 +82,7 @@ to update from blargboard 1.2.4, download the update package from releases
 ## Bug fixes in Blargboard 1.2.5 MRS
  
  * fixed the goomba challenge not displaying the images
+ * Gave nuke more checks: only if you are root and user id 1 can you nuke people
 -------------------------------------------------------------------------------
 
 Coders and such, who like to hack new features in their software, may think that the use

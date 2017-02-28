@@ -13,6 +13,12 @@ if(!$user)
 
 if($user["powerlevel"] > 0)
 	kill("You can't nuke a staff member. Demote him first.");
+
+if(!$loguser['root'])
+	kill("only root can nuke");
+
+if(!$loguserid == 1)
+	kill("Only founder can nuke");
 	
 $passwordFailed = false;
 
