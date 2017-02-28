@@ -76,7 +76,8 @@ to update from blargboard 1.2.4, download the update package from releases
  
 ## New Features in Blargboard 1.2.5 MRS
 
- * insert new features here
+ * ingrated the layout maker port I did
+ * comes with the like buttom plugin
  
 ## Bug fixes in Blargboard 1.2.5 MRS
  
