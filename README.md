@@ -1,15 +1,10 @@
-# Blargboard
+# Blargboard MRS
 
-http://kuribo64.net/blargboard/
-
-http://kuribo64.net/?page=forum&id=82
+NOTE: this will be the last MRS release. This will be replaced by Memeboard
 
 -------------------------------------------------------------------------------
 
 Board software written in PHP. Uses MySQL for storage.
-
-This is the software that powers Kuribo64 (http://kuribo64.net/). Or well, not quite.
-The code provided here is a cleaned up version, with all the K64-specific stuff removed.
 
 It is based off ABXD. ABXD is made by Dirbaio, Nina, GlitchMr & co, and was originally
 Kawa's project. See http://abxd.dirbaio.net/ for more details.
@@ -67,32 +62,9 @@ Depending on the versions, your update may involve running extra scripts to fix 
 
 Updating from Blargboard 1.0 and mrs 1.2.1-1.2.2 isn't covered.
 
-To update from Blargboard 1.2, just drag and drop the new files into your install of blarg, exact files are listed here:
-*/index.php
-*/install.php
-*/lib/bbcode_callbacks.php
-*/lib/bbcode_parser.php
-*/lib/common.php
-*/lib/syndromes.php
-*/lib/permstrings.php
-*/pages/register.php
-*/pages/404.php
-*/pages/newreply.php
-*/pages/newthread.php
-*/pages/nuke.php
-*/pages/reregs.php
-*/instameme (the whole folder. put in the root of your board)
-*/pages/irc.php
-*/menus.php
-*/pages/profile.php
-*/js/tricks.js
-*/ranksets/mario (whole folder)
-*/kurichallenge.php
+To update from Blargboard 1.2, Download the 1.2 update package from releases
 
-to update from blargboard 1.2.3, drag these files
-*/lib/common.php
-*/ranksets/mario (whole folder)
-*/kurichallenge.php
+to update from blargboard 1.2.4, download the previous version update package from releases
 
 ## Features
 
@@ -157,8 +129,6 @@ To use URL rewriting, make sure you have mod_rewrite on, if you dont you can tur
 
 ## Support, troubleshooting, etc
 
-The Blargboard help forum is at Kuribo64: http://kuribo64.net/?page=forum&id=82
-
 If anything goes wrong with your board, go there and let us know. Make sure to describe your problems in detail, our crystal ball is scratched so we can't see well.
 
 If the error is a 'MySQL Error', to get a detailed report, you need to open config/database.php in a text editor, find `$debugMode = 0;` and replace it with `$debugMode = 1;`. 
@@ -168,29 +138,4 @@ YOU WILL NOT RECEIVE HELP IF YOU HAVEN'T READ THE INSTRUCTIONS WHEN INSTALLING Y
 
 ## TODO list
 
-(no particular order there)
-
- * finish implementing templates
- * improve the permission editing interfaces
- * port the 'show/hide sidebar' feature from Kuribo64? or just nuke the sidebar? more leaning towards the latter.
- * merge/split threads a la phpBB (albeit without the shitty interface)
- * support multiple password hashing methods? (for importing from other board softwares, or for those who feel SHA256 with per-user salt isn't enough) (kinda addressed via login plugins)
- * more TODO at Kuribo64 and RVLution
- 
- * low priority: change/remove file headers? most of the original files still say 'AcmlmBoard XD'
- * besides it'd be an opportunity to add a license like the GPL
- * Add more stuff
- * make blargboard 1.2.5 MRS
- * finish up intergrated hall of shame
--------------------------------------------------------------------------------
-
-Blargboard is provided as-is, with no guarantee that it'll be useful or even work. I'm not
-responsible if it explodes in your face. Use that thing at your own risk.
-
-Oh well, it should work rather well. See Kuribo64. But uh, we never know.
-
--------------------------------------------------------------------------------
-
-Have fun.
-
-blarg
+ * Finish this up and make memeboard
