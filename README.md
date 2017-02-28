@@ -60,9 +60,7 @@ Once that is done, run update.php (http://my.board.for.example/update.php) to up
 Depending on the versions, your update may involve running extra scripts to fix certain things. Make sure to follow those instructions.
 
 
-Updating from Blargboard 1.0 and 1.2 and mrs 1.2.1-1.2.3 isn't covered.
-
-to update from blargboard 1.2.4, download the update package from releases
+Updating from Blargboard 1.0 and 1.2 and previous MRS versions isn't covered.
 
 ## Features
 
