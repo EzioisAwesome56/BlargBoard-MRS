@@ -2,9 +2,9 @@
 
 require('config/kurikey.php');
 
-$goom1 = imagecreatefrompng('ranksets/mario/goomba.gif');
-$goom2 = imagecreatefrompng('ranksets/mario/redgoomba.gif');
-$goom3 = imagecreatefrompng('ranksets/mario/giantgoomba.gif');
+$goom1 = imagecreatefrompng('ranksets/old/goomba.png');
+$goom2 = imagecreatefrompng('ranksets/old/redgoomba.png');
+$goom3 = imagecreatefrompng('ranksets/old/giantgoomba.png');
 $goombas = array($goom1, $goom2, $goom3);
 
 
