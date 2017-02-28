@@ -1,9 +1,9 @@
-//credit to the Blargbaord team for the installer
-//minor edits and setting default rankset at account creation by EzioisAwesome56
+<!--credit to the Blargbaord team for the installer
+minor edits and setting default rankset at account creation by EzioisAwesome56-->
 <!doctype html>
 <html>
 <head>
-<title>Blargboard install</title>
+<title>Blargboard MRS install</title>
 <style type="text/css">
 a:link { color: #0e5; }
 a:visited { color: #0e5; }
@@ -163,7 +163,7 @@ $logSqlErrors = 0;
 		1, $boardusername, $sha, $pss, 4, time(), $_SERVER['REMOTE_ADDR'], '', 2, 'blargboard');
 		
 ?>
-	<h3>Your new Blargboard board has been successfully installed!</h3>
+	<h3>Your new Blargboard MRS board has been successfully installed!</h3>
 	<br>
 	You should now:
 	<ul>
@@ -171,7 +171,7 @@ $logSqlErrors = 0;
 		<li><a href="./?page=login">log in to your board</a> and configure it
 	</ul>
 	<br>
-	Thank you for choosing Blargboard!<br>
+	Thank you for choosing Blargboard MRS!<br>
 	<br>
 <?php
 }
