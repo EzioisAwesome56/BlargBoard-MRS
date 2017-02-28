@@ -1,10 +1,11 @@
 /* 
-	Blargboard default data set
+	Blargboard MRS default data set
 	
 	* sample category/forum accessible to everyone
 	* usergroups and their permissions
 	* default settings
 	* smilies
+	* enabled plugins
 */
 
 INSERT INTO `{$dbpref}categories` (`id`, `name`, `corder`, `board`) VALUES
