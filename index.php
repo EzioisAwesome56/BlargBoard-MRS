@@ -161,8 +161,7 @@ if(!file_exists($themefile))
 $layout_credits = 
 '<img src="'.resourceLink('img/poweredbyblarg.png').'" style="float: left; margin-right: 3px;">
 <a href="http://bit.ly/2bGDmfd" target="_blank">Blargboard '.BLARG_VERSION.'</a> &middot; by EzioisAwesome56<br>
-Based off <a href="http://bit.ly/2basjLN" target="_blank">Blargboard 1.2</a> By StapleButter and <a href="http://bit.ly/2bBpaD1" target="_blank">ABXD</a> by Dirbaio, Kawa &amp; co.<br>
-IRC page based from <a href="http://bit.ly/2bSWKmr>Blargboard XD</a> by maorninja3<br>';
+<a href="/blargboard/credits">Credits page</a><br>';
 	
 
 $layout_contents = "<div id=\"page_contents\">$layout_contents</div>";
