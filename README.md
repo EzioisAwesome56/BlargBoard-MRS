@@ -100,7 +100,7 @@ accordingly.
 http://board.example/?page=makelr (http://board.example/makelr) -> regenerates the L/R tree used for forum listings and such.
 Use if some of your forums are showing up in wrong places.
 
-http://board.example/?page=editperms&gid=X -> edit permissions for group ID X.
+http://board.example/?page=editperms&gid=X (http://board.example/editperms/?gid=x) -> edit permissions for group ID X.
 
 http://board.example/?page=secgroups (http://board.example/secgroups) -> assign secondary groups to a user.
 
