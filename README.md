@@ -1,7 +1,5 @@
 # Blargboard MRS
 
-NOTE: this will be the last MRS release. This will be replaced by Memeboard
-
 -------------------------------------------------------------------------------
 
 Board software written in PHP. Uses MySQL for storage.
@@ -133,7 +131,4 @@ This will make the board give you the MySQL error message and the query which we
 YOU WILL NOT RECEIVE HELP IF YOU HAVEN'T READ THE INSTRUCTIONS WHEN INSTALLING YOUR BOARD.
 
 ## TODO list
-
- * Finish this up and make memeboard
- 
-its been fun friends, but MRS is basically dead now. RIP
+ * no idea
