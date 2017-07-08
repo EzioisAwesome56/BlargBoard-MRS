@@ -14,9 +14,6 @@ require('lib/common.php');
 $layout_crumbs = '';
 $layout_actionlinks = '';
 
-// Protect from <iframe> password steal hack
-header('X-Frame-Options: DENY');
-
 if (isset($_GET['forcelayout']))
 {
 	setcookie('forcelayout', (int)$_GET['forcelayout'], time()+365*24*3600, BOARD_ROOT, "", false, true);
