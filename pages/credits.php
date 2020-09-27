@@ -3,14 +3,23 @@ div.Box { background: #4dabb3 !important; padding: 15px !important; margin: 25px
 </style>
 <body>
 <div class="Box">
-<h1>Blargboard MRS credits</h1><br>
-Dirbaio, Kawa & co.: Made <a href="http://bit.ly/2bBpaD1">ABXD</a><br>
-Staplebutter: made <a href="http://bit.ly/2basjLN">Blargboard 1.2</a>, which is what this is based off of<br>
-EzioisAwesome56: Main coder of the MRS project<br>
-Maorninja: Coder of <a href="https://notabug.org/WorldWeb-XD/WorldWeb-XD">WorldWeb XD</a>, provided the IRC page among other things. Also did an emergency patch<br><br>
-
-This is the final goodbye to the Blargboard MRS project. 1.2.5 is the last version of MRS to be made. Its been a fun ride, but im teaming up with xkitten and maorninja to make Memeboard<br>
-so look out for that<br>
+<h1>Credits</h1>
+<h2>MRS Contributors</h2>
+<ul>
+<li>Ezio</li>
+<li>koutohato</li>
+<li>shan</li>
+</ul>
+<h2>Original Contributors</h2>
+<ul>
+<li>Arisotura</li>
+<li>Kawa</li>
+<li>Dario N.</li>
+<li>Nadia P.</li>
+<li>GlitchMr</li>
+</ul>
+<h2>Dedicated to the memory of</h2>
+<p>Tachyon @ 42net.org, 1975-2020</p>
 </div>
 </body>
 </html>

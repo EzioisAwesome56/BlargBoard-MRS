@@ -363,7 +363,7 @@ if($_POST['actionsave'])
 						{
 							// verify that the file they want us to delete is an internal avatar and not something else
 							$path = str_replace('$root/', DATA_DIR, $user[$field]);
-							if (!file_exists($path.'.internal')) break;
+							if (!file_exists($path.'.internal')) br;
 							$hash = file_get_contents($path.'.internal');
 							if ($hash === hash_hmac_file('sha256', $path, $userid.SALT))
 							{

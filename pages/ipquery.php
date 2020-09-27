@@ -2,13 +2,11 @@
 
 CheckPermission('admin.ipsearch');
 
-$ip = $_GET["id"];
+$ip = str_replace("_", ".", $_GET["id"]);
 if(!filter_var($ip, FILTER_VALIDATE_IP))
 	Kill("Invalid IP");
 
 $links = array();
-$links[] = "<a href=\"http://dnsquery.org/ipwhois/$ip\" target=\"_blank\">Whois Query</a>";
-$links[] = "<a onclick=\"if(confirm('Are you sure you want to IP-ban $ip?')) {document.getElementById('banform').submit();} return false;\" href=\"#\">IP Ban</a>";
 
 MakeCrumbs(array(actionLink("admin") => __("Admin"), actionLink("ipbans") => __("IP ban manager"), '' => $ip), $links);
 

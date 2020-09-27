@@ -2,9 +2,6 @@
 //  AcmlmBoard XD - User account registration page
 //  Access: any, but meant for guests.
 
-require('config/kurikey.php');
-
-
 $title = __("Register");
 MakeCrumbs(array('' => __('Register')));
 
@@ -12,39 +9,6 @@ $sexes = array(__("Male"), __("Female"), __("N/A"));
 
 if($_POST['register'])
 {
-	$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);
-	$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-	$kuridata = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY, true), base64_decode($_POST['kuridata']), MCRYPT_MODE_ECB, $iv);
-	if (!$kuridata) Kill('Hack attempt detected');
-	
-	$kuridata = explode('|', $kuridata);
-	if (count($kuridata) != 3) Kill('Hack attempt detected');
-	$kuriseed = intval($kuridata[0]);
-	$check = intval($kuridata[1]);
-	$kurichallenge = $kuridata[2];
-	$kurichallenge = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY.$check, true), base64_decode($kurichallenge), MCRYPT_MODE_ECB, $iv);
-	if (!$kurichallenge) Kill('Hack attempt detected');
-	
-	$kurichallenge = explode('|', $kurichallenge);
-	if (count($kurichallenge) != 3) Kill('Hack attempt detected');
-	if ($kurichallenge[0] != $kuridata[0]) Kill('Hack attempt detected');
-	if ($kurichallenge[1] != $kuridata[1]) Kill('Hack attempt detected');
-	
-	$ngoombas = intval($kurichallenge[2]);
-	
-	if ($check < (time()-300))
-		$err = __('The token has expired. Reload the page and try again.');
-	else if ($ngoombas != (int)$_POST['kurichallenge'])
-		$err = __('You failed the challenge. Look harder.');
-	else if (IsProxy())
-	{
-		$adminemail = Settings::get('ownerEmail');
-		if ($adminemail) $halp = '<br><br>If you aren\'t using a proxy, contact the board owner at: '.$adminemail;
-		else $halp = '';
-		
-		$err = __('Registrations from proxies are not allowed. Turn off your proxy and try again.'.$halp);
-	}
-	else
 	{
 		$name = $_POST['name'];
 		$cname = trim(str_replace(" ","", strtolower($name)));
@@ -148,18 +112,6 @@ else
 }
 
 
-$kuriseed = crc32(KURIKEY.microtime());
-srand($kuriseed);
-$check = time();
-$kurichallenge = "{$kuriseed}|{$check}|".rand(3,12);
-
-$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);
-$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-$kurichallenge = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY.$check, true), $kurichallenge, MCRYPT_MODE_ECB, $iv);
-$kurichallenge = base64_encode($kurichallenge);
-$kuridata = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY, true), "{$kuriseed}|{$check}|{$kurichallenge}", MCRYPT_MODE_ECB, $iv);
-$kuridata = base64_encode($kuridata);
-
 $fields = array(
 	'username' => "<input type=\"text\" name=\"name\" maxlength=20 size=24 value=\"".htmlspecialchars($_POST['name'])."\" class=\"required\">",
 	'password' => "<input type=\"password\" name=\"pass\" size=24 class=\"required\">",
@@ -167,11 +119,8 @@ $fields = array(
 	'email' => "<input type=\"email\" name=\"email\" value=\"".htmlspecialchars($_POST['email'])."\" maxlength=\"60\" size=24>",
 	'sex' => MakeOptions("sex",$_POST['sex'],$sexes),
 	'readfaq' => "<label><input type=\"checkbox\" name=\"readFaq\">".format(__("I have read the {0}FAQ{1}"), "<a href=\"".actionLink("faq")."\">", "</a>")."</label>",
-	'kurichallenge' => "<img src=\"".resourceLink("kurichallenge.php?data=".urlencode($kuridata))."\" alt=\"[reload the page if the image fails to load]\"><br>
-		<input type=\"text\" name=\"kurichallenge\" size=\"10\" maxlength=\"6\" class=\"required\">
-		<input type=\"hidden\" name=\"kuridata\" value=\"".htmlspecialchars($kuridata)."\">",
 	'autologin' => "<label><input type=\"checkbox\" checked=\"checked\" name=\"autologin\"".($_POST['autologin']?' checked="checked"':'').">".__("Log in afterwards")."</label>",
-	
+
 	'btnRegister' => "<input type=\"submit\" name=\"register\" value=\"".__("Register")."\">",
 );
 

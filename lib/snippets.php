@@ -277,7 +277,7 @@ function formatIP($ip)
 	$res .=  " " . IP2C($ip);
 	$res = "<nobr>$res</nobr>";
 	if (HasPermission('admin.ipsearch'))
-		return actionLinkTag($res, "ipquery", $ip);
+		return actionLinkTag($res, "ipquery", str_replace(".", "_", $ip));
 	else
 		return $res;
 }
