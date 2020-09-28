@@ -32,13 +32,9 @@ if($_POST['g-recaptcha-response'])
 
 if($_POST['register'])
 {
-	if (IsProxy())
+	if (false)
 	{
-		$adminemail = Settings::get('ownerEmail');
-		if ($adminemail) $halp = '<br><br>If you aren\'t using a proxy, contact the board owner at: '.$adminemail;
-		else $halp = '';
-		
-		$err = __('Registrations from proxies are not allowed. Turn off your proxy and try again.'.$halp);
+		die("go away")
 	}
 	else
 	{
@@ -68,7 +64,7 @@ if($_POST['register'])
 		}*/
 		else if (!$cname or !$name)
 			$err = __('Enter a username and try again.');
-		elseif($ipKnown >= 3 and $_SERVER['REMOTE_ADDR'] != "208.108.121.31")
+		elseif($ipKnown >= 3 and $_SERVER['REMOTE_ADDR'] != "A")
 			$err = __('Another user is already using this IP address');
 		else if ($response == null)
 			$err = __('You forgot to do the Captcha.');
