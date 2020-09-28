@@ -168,18 +168,6 @@ else
 }
 
 
-$kuriseed = crc32(KURIKEY.microtime());
-srand($kuriseed);
-$check = time();
-$kurichallenge = "{$kuriseed}|{$check}|".rand(3,12);
-
-$iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB);
-$iv = mcrypt_create_iv($iv_size, MCRYPT_RAND);
-$kurichallenge = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY.$check, true), $kurichallenge, MCRYPT_MODE_ECB, $iv);
-$kurichallenge = base64_encode($kurichallenge);
-$kuridata = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, md5(KURIKEY, true), "{$kuriseed}|{$check}|{$kurichallenge}", MCRYPT_MODE_ECB, $iv);
-$kuridata = base64_encode($kuridata);
-
 $fields = array(
 	'username' => "<input type=\"text\" name=\"name\" maxlength=20 size=24 value=\"".htmlspecialchars($_POST['name'])."\" class=\"required\">",
 	'password' => "<input type=\"password\" name=\"pass\" size=24 class=\"required\">",
