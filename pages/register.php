@@ -2,9 +2,6 @@
 //  Blargboard MRS - User account registration page
 //  Access: any, but meant for guests.
 
-kill("this page is closed until further notice");
-
-require('config/kurikey.php');
 //require('lib/common.php');
 require_once('lib/recaptchalib.php');
 
