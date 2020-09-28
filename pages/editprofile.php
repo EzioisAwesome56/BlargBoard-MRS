@@ -1,5 +1,4 @@
 <?php
-
 //Check Stuff
 if(!$loguserid)
 	Kill(__("You must be logged in to edit your profile."));
@@ -342,7 +341,7 @@ if($_POST['actionsave'])
 					else
 					{
 						if($_FILES[$field]['name'] == "" || $_FILES[$field]['error'] == UPLOAD_ERR_NO_FILE)
-							continue;
+							break;
 						$usepic = '';
 						$res = HandlePicture($field, ($item['type']=='displaypic') ? 0:1, $usepic);
 						if($res === true)
@@ -364,7 +363,7 @@ if($_POST['actionsave'])
 						{
 							// verify that the file they want us to delete is an internal avatar and not something else
 							$path = str_replace('$root/', DATA_DIR, $user[$field]);
-							if (!file_exists($path.'.internal')) continue;
+							if (!file_exists($path.'.internal')) break;
 							$hash = file_get_contents($path.'.internal');
 							if ($hash === hash_hmac_file('sha256', $path, $userid.SALT))
 							{

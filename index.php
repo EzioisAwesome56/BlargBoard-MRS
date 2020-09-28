@@ -146,7 +146,7 @@ if($title != '')
 //=======================
 // Board logo and theme
 
-$layout_logopic = 'img/logo.png';
+$layout_logopic = "img/logo.png";
 if (!file_exists($layout_logopic))
 	$layout_logopic = 'img/logo.jpg';
 $layout_logopic = resourceLink($layout_logopic);
@@ -160,9 +160,8 @@ if(!file_exists($themefile))
 
 $layout_credits = 
 '<img src="'.resourceLink('img/poweredbyblarg.png').'" style="float: left; margin-right: 3px;">
-<a href="https://github.com/EzioisAwesome56/BlargBoard-MRS" target="_blank">Blargboard '.BLARG_VERSION.'</a> &middot; by EzioisAwesome56<br>
-Credits are found <a href="'.BOARD_ROOT.'credits/">here</a><br>';
-	
+<a href="https://github.com/EzioisAwesome56/BlargBoard-MRS" target="_blank">Blargboard '.BLARG_VERSION.'</a> &middot; by <a href="'.actionLink("credits").'">Ezio & co.</a><br>
+';
 
 $layout_contents = "<div id=\"page_contents\">$layout_contents</div>";
 

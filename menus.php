@@ -4,7 +4,7 @@ $headerlinks = array
 (
 	actionLink('home') => 'Home', 
 	actionLink('board') => 'Forums',
-	actionLink('irc') => IRC
+	actionLink('irc') => 'IRC'
 );
 
 $sidelinks = array

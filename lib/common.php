@@ -10,8 +10,8 @@ error_reporting(E_ALL ^ E_NOTICE | E_STRICT);
 if(!is_file('config/database.php'))
 	die(header('Location: install.php'));
 
-	
-define('BLARG_VERSION', '1.2.5 MRS');
+
+define('BLARG_VERSION', '1.2.6+MRS');
 
 
 $boardroot = preg_replace('{/[^/]*$}', '/', $_SERVER['SCRIPT_NAME']);
@@ -21,25 +21,6 @@ define('BOARD_CWD', getcwd());
 define('DATA_DIR', 'data/');
 define('DATA_URL', BOARD_ROOT.DATA_DIR);
 
-
-// Deslash GPC variables if we have magic quotes on
-if (get_magic_quotes_gpc())
-{
-	function AutoDeslash($val)
-	{
-		if (is_array($val))
-			return array_map('AutoDeslash', $val);
-		else if (is_string($val))
-			return stripslashes($val);
-		else
-			return $val;
-	}
-
-	$_REQUEST = array_map('AutoDeslash', $_REQUEST);
-	$_GET = array_map('AutoDeslash', $_GET);
-	$_POST = array_map('AutoDeslash', $_POST);
-	$_COOKIE = array_map('AutoDeslash', $_COOKIE);
-}
 
 function usectime()
 {
